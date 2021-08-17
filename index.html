@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *:before,
+        *:after{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #4305d3,
+                #eb46a0
+            );
+
+        }
+        .container {
+            border: 2px solid white;
+            width: 40%;
+            min-width: 450px;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;padding: 30px 40px;
+            border-radius: 3px;
+            box-shadow: 0 15px 30px rgb(0,0,0,0.3) ;
+
+         
+        }
+        #newtask{
+            position: relative;
+            background-color: rgb(255, 255, 255);
+            padding: 30px 20px;
+            border-radius: 5px;
+            box-shadow: 0 15px 30px rgb(89, 7, 92) ;
+
+        }
+        #newtask input{
+            width: 70%;
+            width: 70%;
+            height: 45px;
+            font-family: 'poppins',sans-serif;
+            font-size: 15px;
+            border: 2px solid rgb(192, 186, 186);
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: 500;
+            color: #111111;
+            position: relative;
+
+
+        }
+        #newtask button{
+            float: right;
+            width: 25%;
+            width: 25%;
+            height: 45px;
+            border: 2px solid rgb(212, 212, 212);
+            font-family: 'poppins',sans-serif;
+            border-radius: 8px;
+            color: #f0ecec;
+            position: relative;
+            background-color: #4305d3;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;padding: 4px;
+        }
+        #newtask button:hover{
+            transform: translateY(-1px);
+           
+        }
+        #newtask input:focus{
+            outline: none;
+            border-color: #4305d3;
+        }
+        #tasks{
+            background-color: #f0ecec;
+            padding: 30px 20px;
+            margin-top: 60px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgb(89, 7, 92) ;
+            width: 100%;
+            position: relative;
+
+        }
+        .task{
+            background-color: #f0ecec;
+            height: 50px;
+            padding: 5px 10px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #d1d3d4;
+        }
+        .task span{
+            font-family:'poppins',sans-serif; 
+            font-size: 15px;
+            font-weight: 500;
+
+        }
+        .task button{
+            background-color: rgb(0, 60, 255);
+            width: 40px;
+            height: 100%;
+            border: 2px solid white;
+            border-radius: 5px;
+            outline: none;
+        }
+        .completed{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" placeholder="Write your next task...">
+            <button id="push">Add task</button>
+
+        </div>
+        <div id="tasks"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
